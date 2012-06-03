@@ -4,6 +4,7 @@ Crop and Rotate images in Rils 3+
 
 * [jcrop](http://deepliquid.com/projects/Jcrop/)
 * [jqueryrotate](http://code.google.com/p/jqueryrotate)
+* [jqzoom](http://www.mind-projects.it/projects/jqzoom/)
 
 ## Install
 
@@ -18,6 +19,7 @@ In application.css manifest
 ```css
 /*
  * require 'jquery.Jcrop.min'
+ * require 'jquery.jqzoom'
 */
 ```
 
@@ -28,16 +30,28 @@ In application.js manifest
 //= require 'jquery.color'
 //= require 'jquery.Jcrop.min'
 //= require 'jquery.Rotate'
+//= require 'jquery.jqzoom-core'
 //
 ```
 
-Then use as described in Jquery Rotate and JCrop documentation on respective sites.
+Then use as described in respective manuals/documentation.
 
 ## Jquery Rotate
 
 [Jquery Rotate manual](http://code.google.com/p/jqueryrotate/wiki/Documentation)
 
 `$("#img").rotate(90);`
+
+## JqZoom
+
+```coffeescript
+jQuery ->
+  $('.jqzoom').jqzoom
+    zoomType: 'standard',
+    lens:true
+    preloadImages: false
+    alwaysOn:false
+``
 
 ## JCrop
 
